@@ -32,17 +32,8 @@ document.head.appendChild(style);
 fetch('https://uploads-ssl.webflow.com/64be309a0c8ae7454454fcef/6530171402c93f290830bd0e_Liquify%20Badge.svg')
     .then(response => response.text())
     .then(svgContent => {
-        console.log("SVG fetched successfully.");
-
         // 1. Check if .w-webflow-badge exists
         const webflowBadgeExists = document.querySelector('.w-webflow-badge') !== null;
-
-        // Log the presence or absence of the .w-webflow-badge
-        if (webflowBadgeExists) {
-            console.log(".w-webflow-badge exists.");
-        } else {
-            console.log(".w-webflow-badge does not exist.");
-        }
 
         // 2. Create the .liquify-badge element and add the fetched SVG content inside
         const liquifyBadge = document.createElement('div');
